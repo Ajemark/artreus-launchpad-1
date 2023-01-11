@@ -19,7 +19,7 @@ export default function Home() {
       description:`Nina Chanel’s Super Cool World is a collection of 5,080 NFTs (non-fungible tokens) that are made up of hundreds of traits designed by Nina
        Chanel Abney that reflect her frenetic collage-like approach to visual media.`,
       imageUrl:"https://openseauserdata.com/files/8d9f9dc8ed913e52052301f0d59515e8.png",
-      littleImageUrl:"https://looksrare.mo.cloudinary.net/0xB852c6b5892256C264Cc2C888eA462189154D8d7/0xd2327da5643a4d18e7e46942576e4378f4c0066b3394c139bdc2ffac26640940?resource_type=image&f=auto&c=limit&w=360&q=auto"
+      littleImageUrl:"https://looksrare.mo.cloudinary.net/0x7f2E7C52217C8c333f24e2fe2EB371D5eE9669a3/0x08fc33e7f75839ab315c16d85a229f5b16391a6f56b649cfe31eed7c3f4721fc?resource_type=image&f=auto&c=limit&w=360&q=auto",
     },
     {
       name:"MNLTHRVLD",
@@ -46,7 +46,7 @@ export default function Home() {
     <>
     <FeaturedNfts featuredNfts={featuredNfts}/>
   <Tab.Group>
-    <Tab.List as="div" className='flex font-extrabold text-xl p-2 md:text-5xl  my-4  md:my-6 space-x-4 md:space-x-10'>
+    <Tab.List as="div" className='flex font-extrabold text-3xl p-2 md:text-5xl  my-4  md:my-6 space-x-4 md:space-x-10'>
       <Tab as={React.Fragment}>
       {({selected})=>(
         <button className={selected?'text-brandyellow border-b-4 border-brandpurple':"text-[#ccc]"}>Live</button>
