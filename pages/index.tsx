@@ -13,7 +13,7 @@ import React from 'react'
 export default function Home() {
   const nfts= [0,0,0,0]
   
-  const featuredNfts:FeaturedNft[]=[
+  const featuredNfts=[
     {
       name:"Super Cool World",
       description:`Nina Chanel’s Super Cool World is a collection of 5,080 NFTs (non-fungible tokens) that are made up of hundreds of traits designed by Nina
@@ -58,11 +58,11 @@ export default function Home() {
      
     </Tab.List>
     <Tab.Panels>
-     <Tab.Panel className='grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4  p-2'>
+     <Tab.Panel className='flex flex-wrap justify-center gap-x-1 gap-2 md:gap-y-8'>
        {Array(5).fill(0).map((_,index)=>(
         <LiveNftCard key={index} imageUrl="/nft.png" name="SmallBrosNft" id="3033" price="300"/>
         ))}</Tab.Panel>
-        <Tab.Panel className='grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4  p-2'>
+        <Tab.Panel className='flex flex-wrap justify-center gap-x-1 gap-2 md:gap-y-8'>
        {Array(4).fill(0).map((_,index)=>(
         <LiveNftCard key={index} imageUrl="/nft.png" name="SmallBrosNft" id="3033" price="300"/>
         ))}</Tab.Panel>

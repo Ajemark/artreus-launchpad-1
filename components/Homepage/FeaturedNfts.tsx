@@ -1,17 +1,18 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import useWindowSize from '../../hooks/useWindowSize'
 export type FeaturedNft={
   name:string,
   description:string,
   imageUrl:string,
-  littleImageUrL:string,
+  littleImageUrl:string,
 }
 type props ={
   featuredNfts:FeaturedNft[]
 }
 export default function FeaturedNfts({featuredNfts}:props) {
-  
+  const size=useWindowSize()
   
   const router=useRouter();
   const current=React.useRef(0)
@@ -48,22 +49,22 @@ export default function FeaturedNfts({featuredNfts}:props) {
   return (
     <>
   
-   {featuredNfts.map(({name,imageUrl,description,littleImageUrL},index)=>(
-      <div key={index} className={`flex  md:space-x-6  ${!(index === (currentIndex -2))?'hidden':'visible'} '`}>
+   {featuredNfts.map(({name,imageUrl,description,littleImageUrl},index)=>(
+      <div key={index} className={`flex justify-center  md:space-x-6  ${!(index === (currentIndex -2))?'hidden':'visible'} '`}>
      
-      
-        <div className=' w-8/12 md:relative p-4 mb-10 '>
+      {size.width&&size.width>765&&<div className=' w-8/12 md:relative p-4 mb-10 '>
     
 
-          <img  src={`${imageUrl}`} className='opacity-90 md:absolute -z-10 md:w-full md:h-full rounded-t-2xl object-cover '/>
-          <div className='p-6 pl-16'>
-          <h1 className="text-2xl md:text-4xl font-extrabold  mb-5 md:w-[10ch]">{name}</h1>
-          <p className=' md:w-[50ch]'>{description}</p>
-      <button className='  bg-brandyellow text-brandpurple font-extrabold py-2 px-6 rounded mt-10' >Go to Launchpad</button>
-        </div>
-        </div>
+    <img  src={`${imageUrl}`} className='opacity-90 md:absolute -z-10 w-full h-full rounded-t-2xl '/>
+    <div className='p-6 pl-16'>
+    <h1 className="text-2xl md:text-4xl font-extrabold  mb-5 md:w-[10ch]">{name}</h1>
+    <p className=' md:w-[50ch]'>{description}</p>
+<button className='  bg-brandyellow text-brandpurple font-extrabold py-2 px-6 rounded mt-10' >Go to Launchpad</button>
+  </div>
+  </div>}
+        
        
-        <img  src={`${littleImageUrL}`} className='ml-4 opacity  h-full rounded-t-2xl object-cover '/>
+        <img src={`${littleImageUrl}`} className='ml-4   h-full rounded-t-2xl object-cover '/>
       
        
   </div>  
