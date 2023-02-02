@@ -2,7 +2,7 @@ import React from 'react'
 import { Menu } from '@headlessui/react'
 import Link from 'next/link'
 import ConnectModal from '../ConnectModal'
-
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const DropDown = () => {
   return (<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,11 +106,8 @@ export default function MobileMenuNav({ showMenu, setSelected, isOpen, handleCon
       <MenuItem showMenu={showMenu} />
 
       <div className='flex justify-center px-6 py-4 bg-[#fff]'>
-        <button
-          className='bg-brandpurple px-6 py-2 border-0 flex items-center font-semibold'
-          onClick={() => handleConnect()}>
-          {connected ? "Disconnect Wallet" : "Connect Wallet"}
-        </button>
+      <ConnectButton label="Connect Wallet" />
+       
       </div>
 
       {/* <ConnectModal isOpen={isOpen} setSelected={setSelected} setIsOpen={setIsOpen} /> */}

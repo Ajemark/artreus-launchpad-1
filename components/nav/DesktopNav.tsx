@@ -115,7 +115,7 @@ export default function DesktopNav({ navItems, setSelected, isOpen, handleConnec
             className='md:text-sm lg:text-md border-2 border-brandyellow py-2 px-4 md:px-6 rounded-lg'>
             {connected ? "Disconnect Wallet" : "Connect Wallet"}
           </button> */}
-           <ConnectButton label="Conect Wallet" />
+           <ConnectButton label="Connect Wallet" />
         </li>
       </ul>
 
