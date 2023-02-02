@@ -2,7 +2,7 @@ import React from 'react'
 import { Menu } from '@headlessui/react'
 import Link from 'next/link'
 import ConnectModal from '../ConnectModal'
-
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const DropDown = () => {
   return (<svg
@@ -111,10 +111,11 @@ export default function DesktopNav({ navItems, setSelected, isOpen, handleConnec
         </Menu> */}
 
         <li>
-          <button
+          {/* <button
             className='md:text-sm lg:text-md border-2 border-brandyellow py-2 px-4 md:px-6 rounded-lg'>
             {connected ? "Disconnect Wallet" : "Connect Wallet"}
-          </button>
+          </button> */}
+           <ConnectButton label="Conect Wallet" />
         </li>
       </ul>
 
